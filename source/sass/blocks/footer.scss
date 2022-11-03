@@ -1,0 +1,132 @@
+.footer {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 55px;
+  color: $color-white;
+
+  background-color: $color-dark-blue;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: $color-default-white;
+  text-transform: uppercase;
+}
+
+.footer__toggle {
+  display: none;
+
+  @media (max-width: $max-mobile-width) {
+    display: block;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      border: 1px solid $color-light-blue;
+      border-radius: 50%;
+    }
+
+    &:active {
+      background-color: $color-light-blue;
+    }
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .footer__nav {
+    position: relative;
+    padding-top: 20px;
+
+    &::before {
+     @include pseudo;
+     z-index: 1;
+     width: 330px;
+     height: 1px;
+     left: -30px;
+     background-color: rgba($color-white, 0.7);
+     top: 0;
+    }
+  }
+
+  .footer__contacts {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &::before {
+     @include pseudo;
+     z-index: 1;
+     width: 330px;
+     height: 1px;
+     left: -30px;
+     background-color: rgba($color-white, 0.7);
+     top: 0;
+    }
+
+    &::after {
+      @include pseudo;
+      z-index: 1;
+      width: 330px;
+      height: 1px;
+      left: -30px;
+      background-color: rgba($color-white, 0.7);
+      bottom: 0;
+    }
+  }
+
+  .footer__menu {
+    position: relative;
+  }
+
+  .footer__list {
+   display: none;
+  }
+
+  .footer__menu.is-active .footer__list{
+    display: block;
+  }
+
+
+  .footer__menu.is-active .footer__open-icon{
+    display: none;
+  }
+
+  .footer__menu.is-active .footer__close-icon{
+    display: block;
+  }
+
+  .footer__open-icon {
+    display: block;
+  }
+
+  .footer__close-icon {
+    display: none;
+  }
+}

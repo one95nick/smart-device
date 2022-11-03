@@ -1,0 +1,50 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.social__list {
+  display: flex;
+  align-content: center;
+  margin-left: 20px;
+
+  @include list-reset;
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.social__logo {
+  margin-bottom: 40px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  width: 40px;
+  height: 40px;
+  display: block;
+
+  &:hover{
+    border-bottom: 1px solid $color-light-blue;
+  }
+}
