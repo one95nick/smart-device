@@ -1,9 +1,10 @@
 .features-list {
+  @include list-reset;
+
   display: grid;
 
   gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  @include list-reset;
 
   @media (max-width: $max-mobile-width) {
     grid-template-columns: repeat(1, 1fr);
