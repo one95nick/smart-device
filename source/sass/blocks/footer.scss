@@ -2,18 +2,41 @@
   display: flex;
   padding-top: 50px;
   padding-bottom: 55px;
+
   color: $color-white;
 
   background-color: $color-dark-blue;
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 35px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  margin: 0;
 
   @media (max-width: $max-tablet-width) {
     flex-direction: column;
   }
 }
 
-.footer__wrapper {
+.footer__nav {
+  margin-right: 77px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-right: 148px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.footer__nav-wrapper {
   display: flex;
-  justify-content: space-between;
+  margin-top: 7px;
+
 
   @media (max-width: $max-mobile-width) {
     flex-direction: column;
@@ -30,23 +53,33 @@
   line-height: 16px;
   color: $color-default-white;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .footer__toggle {
   display: none;
 
   @media (max-width: $max-mobile-width) {
-    display: block;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
     position: absolute;
-    right: 0;
-    top: -40px;
+    top: -39px;
+    right: -8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
+
+    background: transparent;
+    border: none;
 
     &:hover {
       border: 1px solid $color-light-blue;
@@ -62,42 +95,54 @@
 @media (max-width: $max-mobile-width) {
   .footer__nav {
     position: relative;
+    margin-right: 0;
     padding-top: 20px;
 
     &::before {
-     @include pseudo;
-     z-index: 1;
-     width: 330px;
-     height: 1px;
-     left: -30px;
-     background-color: rgba($color-white, 0.7);
-     top: 0;
+      @include pseudo;
+
+      top: -3px;
+      left: -30px;
+      z-index: 1;
+
+      width: 325px;
+      height: 1px;
+
+      background-color: rgba($color-white, 0.7);
     }
   }
 
   .footer__contacts {
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+    margin-top: 7px;
+    padding-top: 23px;
+    padding-bottom: 2px;
 
     &::before {
-     @include pseudo;
-     z-index: 1;
-     width: 330px;
-     height: 1px;
-     left: -30px;
-     background-color: rgba($color-white, 0.7);
-     top: 0;
+      top: 0;
+      left: -30px;
+      z-index: 1;
+
+      width: 325px;
+      height: 1px;
+
+      background-color: rgba($color-white, 0.7);
+
+      @include pseudo;
     }
 
     &::after {
-      @include pseudo;
-      z-index: 1;
-      width: 330px;
-      height: 1px;
-      left: -30px;
-      background-color: rgba($color-white, 0.7);
       bottom: 0;
+      left: -30px;
+      z-index: 1;
+
+      width: 325px;
+      height: 1px;
+
+      background-color: rgba($color-white, 0.7);
+
+      @include pseudo;
     }
   }
 
@@ -106,19 +151,19 @@
   }
 
   .footer__list {
-   display: none;
+    display: none;
   }
 
-  .footer__menu.is-active .footer__list{
+  .footer__menu.is-active .footer__list {
     display: block;
   }
 
 
-  .footer__menu.is-active .footer__open-icon{
+  .footer__menu.is-active .footer__open-icon {
     display: none;
   }
 
-  .footer__menu.is-active .footer__close-icon{
+  .footer__menu.is-active .footer__close-icon {
     display: block;
   }
 

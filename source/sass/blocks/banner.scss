@@ -1,6 +1,6 @@
 .banner {
   padding-top: 185px;
-  padding-bottom: 280px;
+  padding-bottom: 283px;
   padding-left: 475px;
 
   color: $color-white;
@@ -12,29 +12,32 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-left: 25px;
     padding-bottom: 190px;
+    padding-left: 25px;
   }
 }
 
 .banner h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
   padding: 0;
 
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
   text-transform: uppercase;
+  letter-spacing: 0.07em;
 
   @media (max-width: $max-tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 
     font-size: 64px;
     line-height: 75px;
   }
 
   @media (max-width: $max-mobile-width) {
+    margin-bottom: 8px;
+
     font-size: 36px;
     line-height: 42px;
   }
@@ -51,13 +54,20 @@
   line-height: 34px;
   font-family: $ff-alternative;
 
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 57px;
+  }
+
   @media (max-width: $max-mobile-width) {
     font-size: 14px;
     line-height: 22px;
+    margin-bottom: 44px;
   }
 }
 
 .banner a {
+  display: inline-block;
   padding: 15px 25px;
 
   font-weight: 700;
@@ -72,17 +82,21 @@
   border-radius: 3px;
 
   @media (max-width: $max-tablet-width) {
-    margin-left: 50px;
+    margin-left: 45px;
+    padding: 17px 27px;
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-left: 20px;
+    min-width: 100%;
+    margin-left: 0;
+    padding: 12px 27px;
+
     font-size: 14px;
     line-height: 16px;
   }
 }
 
-.banner__button {
+.banner__button-text {
   &--desktop {
     @media (max-width: $max-mobile-width) {
       display: none;
