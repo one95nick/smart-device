@@ -1,0 +1,159 @@
+.store-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+
+  @media (max-width: $max-tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.store-list__item {
+  position: relative;
+
+  width: 350px;
+  height: 650px;
+  padding: 46px 40px;
+
+  background-color: $color-tory-blue;
+  background-size: cover;
+
+  @media (max-width: $max-tablet-width) {
+    width: 670px;
+    height: 250px;
+    margin-bottom: 30px;
+    padding-top: 37px;
+    padding-left: 45px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 270px;
+    height: 250px;
+    padding: 27px 30px;
+  }
+
+  &--production {
+    background-image: url("../img/store/production_desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/store/production_desktop@2x.jpg");
+    }
+
+    @media (max-width: $max-tablet-width) {
+      background-image: url("../img/store/production_tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/production_tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/store/production_mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/production_mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--mounting {
+    background-image: url("../img/store/mounting_desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/store/mounting_desktop@2x.jpg");
+    }
+
+    @media (max-width: $max-tablet-width) {
+      background-image: url("../img/store/mounting_tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/mounting_tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/store/mounting_mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/mounting_mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--accessories {
+    background-image: url("../img/store/accessories_desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/store/accessories_desktop@2x.jpg");
+    }
+
+    @media (max-width: $max-tablet-width) {
+      background-image: url("../img/store/accessories_tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/accessories_tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/store/accessories_mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/store/accessories_mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.store-list__item h3 {
+  max-width: 180px;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  @media (max-width: $max-tablet-width) {
+    max-width: 150px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 130px;
+
+    font-size: 18px;
+  }
+}
+
+.store-list__button {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background-color: $color-light-blue;
+  background-image: url("../img/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3px 0 0 0;
+
+  @media (max-width: $max-mobile-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    background-color: $color-dark-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
